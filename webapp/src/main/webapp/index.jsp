@@ -3,4 +3,4 @@
 <h2> Glad to see you here </h2>
 <h1> Good job Emeke on learning Devops</h1>
 <h1> Remember the world is your oyster <h1>
-<h1> Never you give up because GOd got you!!! <h1>	
+<h1> Never you give up because God got you!!! <h1>	
