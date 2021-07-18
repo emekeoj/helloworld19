@@ -15,20 +15,9 @@ pipeline {
         sh 'mvn test'
       } 
     }
-     stage('Test') {
-      steps {
-        echo "test step"
-      
-      } 
-    }
      stage('Tomcat Deploy') {
       steps {
       deploy adapters: [tomcat8(credentialsId: 'TomcatID', path: '', url: 'http://10.0.0.39:8080/')], contextPath: null, war: '**/*war'
-      } 
-    }
-     stage('Docker') {
-      steps {
-        echo "image step"
       } 
     }
   }
