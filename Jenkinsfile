@@ -21,9 +21,9 @@ pipeline {
       
       } 
     }
-     stage('Deploy') {
+     stage('Tomcat Deploy') {
       steps {
-        echo "deploy step"
+      deploy adapters: [tomcat8(credentialsId: 'TomcatID', path: '', url: 'http://10.0.0.39:8080/')], contextPath: null, war: '**/*war'
       } 
     }
      stage('Docker') {
