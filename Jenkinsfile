@@ -1,7 +1,7 @@
 pipeline {
   agent any
   triggers {
-    pollSCM 'H/1 * * * *'
+    pollSCM '* * * * *'
   }
   tools {
      maven 'M2_HOME'
@@ -12,7 +12,7 @@ pipeline {
         sh 'mvn clean'
         sh 'mvn install'
         sh 'mvn package'
-        sh 'mvn testS'
+        sh 'mvn test'
       } 
     }
      stage('Tomcat Deploy') {
