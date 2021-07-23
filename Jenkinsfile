@@ -1,7 +1,7 @@
 pipeline {
   environment {
     imagename = "emekeoj/jenkinsfile"
-    registryCredential = 'emekeoj-dockerhub'
+    registryCredential = 'DockerID'
     dockerImage = ''
   }
   agent any
